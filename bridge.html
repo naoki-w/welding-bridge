@@ -27,6 +27,7 @@
 
   <a id="btnPre"  class="btn" href="#">事前入力（溶接前）</a><br/>
   <a id="btnWeld" class="btn" href="#">溶接時入力</a>
+  <a id="btnApps" class="btn" href="#">Power Apps（ブロック一覧・一括更新）</a>
 
   <script>
     // ▼ あなたが貼ってくれたURL（&amp; は & に戻すこと）
@@ -36,6 +37,9 @@
     const WELD_TEMPLATE =
       "https://forms.office.com/Pages/ResponsePage.aspx?id=lJ6VWniifUarM9WZCadbrfRgC3Czd_JEmdVyNcQJO-xUMTFNTTBJRUJNQVVQTzU0VjVFUEtPSDZEQS4u&r19f502feb4a14656a51e8d04327414a4=AAA&r36edc9b51de049eba731b62fbe30caff=BBB";
 
+    const APPS_TEMPLATE =
+      "https://apps.powerapps.com/play/e/default-5a959e94-a278-467d-ab33-d59909a75bad/a/b264bbf7-fba7-4d95-b833-f86562fd4bb2?tenantId=5a959e94-a278-467d-ab33-d59909a75bad&hint=6c463890-40aa-4058-ab6f-6ffe57e68b03&sourcetime=1772460114013&project=AAA&block=BBB";
+    
     // ▼ QRの例： .../bridge.html?project=7EMEY008&block=12
     const params = new URLSearchParams(location.search);    
     const project = params.get("project") || "";
@@ -58,6 +62,8 @@
     // ボタンにセット
     document.getElementById("btnPre").href  = build(PRE_TEMPLATE);
     document.getElementById("btnWeld").href = build(WELD_TEMPLATE);
+    document.getElementById("btnApps").href = build(APPS_TEMPLATE);
   </script>
 </body>
+
 </html>
